@@ -2,6 +2,18 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:ResearchProject/UserAccount/UserAccount+CoreDataClass.h">
+   </FileRef>
+   <FileRef
+      location = "group:ResearchProject/UserAccount/UserAccount+CoreDataClass.m">
+   </FileRef>
+   <FileRef
+      location = "group:ResearchProject/UserAccount/UserAccount+CoreDataProperties.h">
+   </FileRef>
+   <FileRef
+      location = "group:ResearchProject/UserAccount/UserAccount+CoreDataProperties.m">
+   </FileRef>
+   <FileRef
       location = "group:ResearchProject.xcodeproj">
    </FileRef>
    <FileRef

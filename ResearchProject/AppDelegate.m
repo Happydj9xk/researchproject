@@ -8,6 +8,9 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import <MagicalRecord/MagicalRecord.h>
+
+static NSString * const kUserAccountName = @"Useraccount.sqlite";
 
 @interface AppDelegate ()
 
@@ -18,6 +21,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [self copyDefaultStoreIfNecessary];
+    [MagicalRecord setLoggingLevel:MagicalRecordLoggingLevelVerbose];
+    [MagicalRecord setupCoreDataStackWithStoreNamed:kUserAccountName];
+    
+    self.managedObjectContext = [NSManagedObjectContext MR_defaultContext];
+    
     ViewController *viewController = self.window.rootViewController;
     UINavigationController *navViewController = [[UINavigationController alloc] initWithRootViewController:viewController];
     self.window.rootViewController = navViewController;
@@ -48,9 +58,35 @@
 }
 
 
-- (void)applicationWillTerminate:(UIApplication *)application {
+- (void)applicationWillTerminate:(UIApplication *)application
+{
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+#pragma mark - CoreDataAbout
+
+- (void) copyDefaultStoreIfNecessary;
+{
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    
+    NSURL *storeURL = [NSPersistentStore MR_urlForStoreName:kUserAccountName];
+    
+    // If the expected store doesn't exist, copy the default store.
+    if (![fileManager fileExistsAtPath:[storeURL path]])
+    {
+        NSString *defaultStorePath = [[NSBundle mainBundle] pathForResource:[kUserAccountName stringByDeletingPathExtension] ofType:[kUserAccountName pathExtension]];
+        
+        if (defaultStorePath)
+        {
+            NSError *error;
+            BOOL success = [fileManager copyItemAtPath:defaultStorePath toPath:[storeURL path] error:&error];
+            if (!success)
+            {
+                NSLog(@"Failed to install default recipe store");
+            }
+        }
+    }
+    
+}
 
 @end

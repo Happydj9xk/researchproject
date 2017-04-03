@@ -15,6 +15,7 @@
 		180771941E921357008417AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 180771921E921357008417AE /* LaunchScreen.storyboard */; };
 		18ADB0751E9218E8002EC544 /* SearchDeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18ADB0741E9218E8002EC544 /* SearchDeviceViewController.m */; };
 		18ADB0781E921901002EC544 /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18ADB0771E921901002EC544 /* EditViewController.m */; };
+		18ADB07B1E92270A002EC544 /* UserAccount.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18ADB0791E92270A002EC544 /* UserAccount.xcdatamodeld */; };
 		5C7208E7FAC372AFAE48A65E /* libPods-ResearchProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C3A4E5AE592D275DB2D2DDB /* libPods-ResearchProject.a */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		18ADB0741E9218E8002EC544 /* SearchDeviceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchDeviceViewController.m; sourceTree = "<group>"; };
 		18ADB0761E921901002EC544 /* EditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditViewController.h; sourceTree = "<group>"; };
 		18ADB0771E921901002EC544 /* EditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditViewController.m; sourceTree = "<group>"; };
+		18ADB07A1E92270A002EC544 /* UserAccount.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserAccount.xcdatamodel; sourceTree = "<group>"; };
 		6B83C6C97730B615398D221B /* Pods-ResearchProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ResearchProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ResearchProject/Pods-ResearchProject.debug.xcconfig"; sourceTree = "<group>"; };
 		8C3A4E5AE592D275DB2D2DDB /* libPods-ResearchProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ResearchProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE3A33863BC5743C8D896F95 /* Pods-ResearchProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ResearchProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-ResearchProject/Pods-ResearchProject.release.xcconfig"; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				180771871E921357008417AE /* AppDelegate.h */,
 				180771881E921357008417AE /* AppDelegate.m */,
 				1807718A1E921357008417AE /* ViewController.h */,
+				18ADB0791E92270A002EC544 /* UserAccount.xcdatamodeld */,
 				1807718B1E921357008417AE /* ViewController.m */,
 				18ADB0731E9218E8002EC544 /* SearchDeviceViewController.h */,
 				18ADB0741E9218E8002EC544 /* SearchDeviceViewController.m */,
@@ -238,6 +241,7 @@
 			files = (
 				18ADB0751E9218E8002EC544 /* SearchDeviceViewController.m in Sources */,
 				1807718C1E921357008417AE /* ViewController.m in Sources */,
+				18ADB07B1E92270A002EC544 /* UserAccount.xcdatamodeld in Sources */,
 				180771891E921357008417AE /* AppDelegate.m in Sources */,
 				180771861E921357008417AE /* main.m in Sources */,
 				18ADB0781E921901002EC544 /* EditViewController.m in Sources */,
@@ -404,6 +408,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		18ADB0791E92270A002EC544 /* UserAccount.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				18ADB07A1E92270A002EC544 /* UserAccount.xcdatamodel */,
+			);
+			currentVersion = 18ADB07A1E92270A002EC544 /* UserAccount.xcdatamodel */;
+			path = UserAccount.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 180771791E921357008417AE /* Project object */;
 }
